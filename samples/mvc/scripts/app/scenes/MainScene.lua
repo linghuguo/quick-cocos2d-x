@@ -1,5 +1,6 @@
 
 local PlayDuelController = import("..controllers.PlayDuelController")
+local testwebview = import("..controllers.WebViewTest")
 
 local MainScene = class("MainScene", function()
     return display.newScene("MainScene")
@@ -8,8 +9,14 @@ end)
 function MainScene:ctor()
     display.newColorLayer(ccc4(255, 255, 255, 255)):addTo(self)
 
+
+  
     -- add controller
-    self:addChild(PlayDuelController.new())
+   self:addChild(PlayDuelController.new())
+    
+    --self:addchild(testwebview.new())
+    
+
 
     cc.ui.UIPushButton.new("Button01.png", {scale9 = true})
         :setButtonSize(200, 80)
